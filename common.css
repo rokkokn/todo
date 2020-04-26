@@ -1,0 +1,8 @@
+.priority {
+  position: absolute;
+  right: 56px;
+}
+.priority:before {
+  content: "優先度";
+  display: inline-block;
+}

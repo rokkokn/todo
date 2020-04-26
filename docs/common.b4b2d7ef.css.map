@@ -1,0 +1,1 @@
+{"version":3,"sources":["common.css"],"names":[],"mappings":"AAAA,UACE,iBAAkB,CAClB,UACF,CACA,iBACE,aAAc,CACd,oBACF","file":"common.b4b2d7ef.css","sourceRoot":"..","sourcesContent":[".priority {\r\n  position: absolute;\r\n  right: 56px;\r\n}\r\n.priority:before {\r\n  content: \"優先度\";\r\n  display: inline-block;\r\n}\r\n"]}
