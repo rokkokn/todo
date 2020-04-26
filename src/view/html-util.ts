@@ -1,4 +1,4 @@
-export function escapeSpecialChars(str) {
+export function escapeSpecialChars(str: string) {
   return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -12,7 +12,7 @@ export function escapeSpecialChars(str) {
  * @param {string} html
  */
 
-export function htmltoElement(html) {
+export function htmltoElement(html: string): Element {
   const template = document.createElement("template");
   template.innerHTML = html;
   return template.content.firstElementChild;
@@ -23,11 +23,16 @@ export function htmltoElement(html) {
  * @return {Element}
  */
 
-export function element(strings, ...values) {
+export function element(
+  strings: TemplateStringsArray,
+  ...values: any[]
+): Element {
   const htmlString = strings.reduce((result, str, i) => {
     const value = values[i - 1];
     if (typeof value === "string") {
       return result + escapeSpecialChars(value) + str;
+    } else if (typeof value === "object") {
+      return result + (value as Element).outerHTML + str;
     } else {
       return result + String(value) + str;
     }
@@ -41,7 +46,7 @@ export function element(strings, ...values) {
  * @param {Element} containerElement コンテナ要素
  */
 
-export function render(bodyElement, containerElement) {
+export function render(bodyElement: Element, containerElement: Element) {
   // containerElementの中身を空にする
   containerElement.innerHTML = "";
   // containerElementの直下にbodyElementを追加する
