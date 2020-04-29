@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p parcel tsc",
     "parcel": "parcel index.html",
-    "build": "parcel build index.html --out-dir=docs",
+    "build": "parcel build index.html --out-dir=docs --public-url ./",
     "tsc": "tsc -w --noEmit"
   },
   "author": "",

@@ -15,4 +15,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./view/html-util":"SWTz","./view/TodoListView":"hXmo","./model/TodoItemModel":"DXAn","./model/TodoListModel":"BHY6"}],"QCba":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./src/App"),r=new e.App;r.mount();
 },{"./src/App":"AoZl"}]},{},["QCba"], null)
-//# sourceMappingURL=/todo.f39c18e5.js.map
+//# sourceMappingURL=todo.f39c18e5.js.map
